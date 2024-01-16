@@ -1,5 +1,5 @@
 import { Link, useParams } from 'react-router-dom';
-import prof1 from '../images/tm8.jpg'
+import prof1 from '../images/women-profile2.png'
 import { useEffect, useState } from 'react';
 import { getSingleContact } from '../services/contactServices';
 import { Helmet } from 'react-helmet-async';

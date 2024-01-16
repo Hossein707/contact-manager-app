@@ -293,7 +293,7 @@ form.myform {
 }
 
 .myform .input-container {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .myform .input-container .input-error-message {
@@ -307,7 +307,7 @@ form.myform {
     background: var(--main-color);
     padding: 0.5rem 1rem;
     font-size: 1.2rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.2rem;
 
 
 }

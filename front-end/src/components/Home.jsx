@@ -71,7 +71,7 @@ const Home = () => {
                     {loading
                         ? <Loading />
                         : (filteredContacts.length > 0 ? filteredContacts.map((contact, index) => (
-                            <Contact key={index} setFilteredContacts={setFilteredContacts} contact={contact} groups={groups} />
+                            <Contact key={index} setAllContacts={setAllContacts} setFilteredContacts={setFilteredContacts} contact={contact} groups={groups} />
                         )) :
                             (<div> مخاطبی برای نمایش موجود نیست.</div>)
                         )

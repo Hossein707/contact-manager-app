@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom';
-import prof1 from '../images/tm8.jpg'
+import prof1 from '../images/women-profile2.png'
 import { deleteContact, getAllContacts } from '../services/contactServices';
 import { confirm } from '../Utils/alert';
 import { toast } from 'react-toastify';
 
 
-const Contact = ({ setFilteredContacts, contact, groups }) => {
+const Contact = ({setAllContacts, setFilteredContacts, contact, groups }) => {
     const contactGroup = groups.find(group => group._id === contact.group);
 
     const removeContactHandler = async (contactId) => {
@@ -14,6 +14,7 @@ const Contact = ({ setFilteredContacts, contact, groups }) => {
             const {status} = await deleteContact(contactId);
             if (status===200) {
                 const { data: contactsData } = await getAllContacts();
+                setAllContacts(contactsData.contacts)
                 setFilteredContacts(contactsData.contacts);
                 toast.success("مخاطب با موفقیت حذف شد.")
             }
